@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Ship">
+  <ClassDiagramComponents>
+    <Class name="Ship" package="" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="build_year" type="int" visibility="package"/>
+        <Field name="name" type="String" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="package"/>
+      </Constructors>
+      <Methods>
+        <Method name="setYear" returnType="void" visibility="package">
+          <Argument type="int" name="build_year"/>
+        </Method>
+        <Method name="getYear" returnType="int" visibility="package"/>
+        <Method name="setName" returnType="void" visibility="package">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="getName" returnType="String" visibility="package"/>
+        <Method name="print" returnType="void" visibility="package"/>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

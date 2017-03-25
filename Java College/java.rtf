@@ -1,0 +1,63 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf760
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\froman\fcharset0 TimesNewRomanPSMT;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \
+\
+import java.util.Scanner;\
+public class Employee\{\
+public static void main(String args[])\{\
+Scanner s = new Scanner(System.in);\
+\pard\pardeftab720\li720\ri-340\partightenfactor0
+
+\f1 \cf0 String Level  ;\
+\pard\pardeftab720\li720\ri-340\partightenfactor0
+\cf0 int Job_number;\
+double Gross, Basic, House_rent, Perks, Net, Incometax;\
+int CA1=1000,CA2=750,CA3=500,CA4=250,EA1=500,EA2=200,EA3=100,EA4=0;\
+System.out.println(\'93Enter details\'94);\
+Level = s.nextLine();\
+Job_number = s.nextInt();\
+Basic = s.nextDouble();\
+House_rent = 0.25*Basic;\
+switch(Level)\{\
+case Manager:\
+Perks = CA1+EA1;\
+break;\
+case Project Leader:\
+Perks = CA2+EA2;\
+return;\
+case Software Engineer:\
+Perks = CA3+EA3;\
+return;\
+case Consultant:\
+Perks = CA4+EA4;\
+return;\
+default:\
+Perks = 0.0;\
+\}\
+Gross = Basic+House_rent+Perks;\
+if(Gross <= 2000)\
+Incometax = 0.0;\
+else if(Gross > 2000 && Gross <= 4000)\
+Incometax = 0.03*Gross\
+\pard\pardeftab720\li720\ri-340\partightenfactor0
+\cf0 else if(Gross > 4000 && Gross <= 5000)\
+Incometax = 0.05*Gross\
+else \
+Incometax = 0.08*Gross\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0 \cf0 \
+Net = Gross-Incometax\
+\pard\pardeftab720\li720\ri-340\partightenfactor0
+
+\f1 \cf0 System.out.println(\'93Level is \'94+Level+\'94 Job number is \'93+Job_number+\'94 Gross pay is \'93+Gross+\'94 Income tax is \'93+Incometax+\'94 Net salary is \'93+Net);\
+
+\f0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \}\
+\}}
